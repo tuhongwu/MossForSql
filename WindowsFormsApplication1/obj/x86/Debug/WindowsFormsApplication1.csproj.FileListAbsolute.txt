@@ -1,0 +1,7 @@
+F:\MossForSql\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+F:\MossForSql\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+F:\MossForSql\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+F:\MossForSql\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.dll
+F:\MossForSql\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+F:\MossForSql\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.dll
+F:\MossForSql\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb

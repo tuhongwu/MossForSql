@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Test">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebsListColloction">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWebsListColloctionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebsListColloctionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFoldersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFoldersResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebPermissions">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWebPermissionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebPermissionsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderPermissions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderID" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderPermissionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFolderPermissionsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListPermissions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListPermissionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListPermissionsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleCollectionFromWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRoleCollectionFromWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoleCollectionFromWebResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserRoleForFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderID" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserRoleForFolderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RemoveUserRoleForFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderID" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveUserRoleForFolderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateUserRoleForList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserRoleForListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RemoveUserRoleForList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveUserRoleForListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateUserRoleForWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserRoleForWebResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RemoveUserRoleForWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveUserRoleForWebResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddUserRoleForFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderID" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddUserRoleForFolderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddUserRoleForWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUserRoleForWebResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddUserRoleForList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUserRoleForListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ClearUserRoleForFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderID" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearUserRoleForFolderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ClearUserRoleForWeb">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearUserRoleForWebResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ClearUserRoleForList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearUserRoleForListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteUserRoleForFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderID" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserRoleForFolderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteUserRoleForWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserRoleForWebResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteUserRoleForList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserRoleForListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreateFolderName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateFolderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderID" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFolderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="HasUniqueRoleAssignmentsForWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="HasUniqueRoleAssignmentsForWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HasUniqueRoleAssignmentsForWebResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HasUniqueRoleAssignmentsForList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HasUniqueRoleAssignmentsForListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HasUniqueRoleAssignmentsForListResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HasUniqueRoleAssignmentsForFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderID" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HasUniqueRoleAssignmentsForFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HasUniqueRoleAssignmentsForFolderResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BreakORResetRoleInheritanceForWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="breakRole" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BreakORResetRoleInheritanceForWebResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BreakORResetRoleInheritanceForList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="breakRole" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BreakORResetRoleInheritanceForListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BreakORResetRoleInheritanceForFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderID" />
+            <s:element minOccurs="1" maxOccurs="1" name="breakRole" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BreakORResetRoleInheritanceForFolderResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebsListColloctionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebsListColloction" />
+  </wsdl:message>
+  <wsdl:message name="GetWebsListColloctionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebsListColloctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFoldersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFolders" />
+  </wsdl:message>
+  <wsdl:message name="GetFoldersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebPermissionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebPermissions" />
+  </wsdl:message>
+  <wsdl:message name="GetWebPermissionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderPermissionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFolderPermissions" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderPermissionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFolderPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListPermissionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListPermissions" />
+  </wsdl:message>
+  <wsdl:message name="GetListPermissionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleCollectionFromWebSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoleCollectionFromWeb" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleCollectionFromWebSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoleCollectionFromWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserRoleForFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserRoleForFolder" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserRoleForFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserRoleForFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserRoleForFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveUserRoleForFolder" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserRoleForFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveUserRoleForFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserRoleForListSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserRoleForList" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserRoleForListSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserRoleForListResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserRoleForListSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveUserRoleForList" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserRoleForListSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveUserRoleForListResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserRoleForWebSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserRoleForWeb" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserRoleForWebSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserRoleForWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserRoleForWebSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveUserRoleForWeb" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserRoleForWebSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveUserRoleForWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserRoleForFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUserRoleForFolder" />
+  </wsdl:message>
+  <wsdl:message name="AddUserRoleForFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUserRoleForFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserRoleForWebSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUserRoleForWeb" />
+  </wsdl:message>
+  <wsdl:message name="AddUserRoleForWebSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUserRoleForWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserRoleForListSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUserRoleForList" />
+  </wsdl:message>
+  <wsdl:message name="AddUserRoleForListSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUserRoleForListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearUserRoleForFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearUserRoleForFolder" />
+  </wsdl:message>
+  <wsdl:message name="ClearUserRoleForFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearUserRoleForFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearUserRoleForWebSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearUserRoleForWeb" />
+  </wsdl:message>
+  <wsdl:message name="ClearUserRoleForWebSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearUserRoleForWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearUserRoleForListSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearUserRoleForList" />
+  </wsdl:message>
+  <wsdl:message name="ClearUserRoleForListSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearUserRoleForListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserRoleForFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserRoleForFolder" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserRoleForFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserRoleForFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserRoleForWebSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserRoleForWeb" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserRoleForWebSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserRoleForWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserRoleForListSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserRoleForList" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserRoleForListSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserRoleForListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFolder" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFolder" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="HasUniqueRoleAssignmentsForWebSoapIn">
+    <wsdl:part name="parameters" element="tns:HasUniqueRoleAssignmentsForWeb" />
+  </wsdl:message>
+  <wsdl:message name="HasUniqueRoleAssignmentsForWebSoapOut">
+    <wsdl:part name="parameters" element="tns:HasUniqueRoleAssignmentsForWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="HasUniqueRoleAssignmentsForListSoapIn">
+    <wsdl:part name="parameters" element="tns:HasUniqueRoleAssignmentsForList" />
+  </wsdl:message>
+  <wsdl:message name="HasUniqueRoleAssignmentsForListSoapOut">
+    <wsdl:part name="parameters" element="tns:HasUniqueRoleAssignmentsForListResponse" />
+  </wsdl:message>
+  <wsdl:message name="HasUniqueRoleAssignmentsForFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:HasUniqueRoleAssignmentsForFolder" />
+  </wsdl:message>
+  <wsdl:message name="HasUniqueRoleAssignmentsForFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:HasUniqueRoleAssignmentsForFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="BreakORResetRoleInheritanceForWebSoapIn">
+    <wsdl:part name="parameters" element="tns:BreakORResetRoleInheritanceForWeb" />
+  </wsdl:message>
+  <wsdl:message name="BreakORResetRoleInheritanceForWebSoapOut">
+    <wsdl:part name="parameters" element="tns:BreakORResetRoleInheritanceForWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="BreakORResetRoleInheritanceForListSoapIn">
+    <wsdl:part name="parameters" element="tns:BreakORResetRoleInheritanceForList" />
+  </wsdl:message>
+  <wsdl:message name="BreakORResetRoleInheritanceForListSoapOut">
+    <wsdl:part name="parameters" element="tns:BreakORResetRoleInheritanceForListResponse" />
+  </wsdl:message>
+  <wsdl:message name="BreakORResetRoleInheritanceForFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:BreakORResetRoleInheritanceForFolder" />
+  </wsdl:message>
+  <wsdl:message name="BreakORResetRoleInheritanceForFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:BreakORResetRoleInheritanceForFolderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestSoapIn" />
+      <wsdl:output message="tns:TestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebsListColloction">
+      <wsdl:input message="tns:GetWebsListColloctionSoapIn" />
+      <wsdl:output message="tns:GetWebsListColloctionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolders">
+      <wsdl:input message="tns:GetFoldersSoapIn" />
+      <wsdl:output message="tns:GetFoldersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebPermissions">
+      <wsdl:input message="tns:GetWebPermissionsSoapIn" />
+      <wsdl:output message="tns:GetWebPermissionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderPermissions">
+      <wsdl:input message="tns:GetFolderPermissionsSoapIn" />
+      <wsdl:output message="tns:GetFolderPermissionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListPermissions">
+      <wsdl:input message="tns:GetListPermissionsSoapIn" />
+      <wsdl:output message="tns:GetListPermissionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleCollectionFromWeb">
+      <wsdl:input message="tns:GetRoleCollectionFromWebSoapIn" />
+      <wsdl:output message="tns:GetRoleCollectionFromWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRoleForFolder">
+      <wsdl:input message="tns:UpdateUserRoleForFolderSoapIn" />
+      <wsdl:output message="tns:UpdateUserRoleForFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRoleForFolder">
+      <wsdl:input message="tns:RemoveUserRoleForFolderSoapIn" />
+      <wsdl:output message="tns:RemoveUserRoleForFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRoleForList">
+      <wsdl:input message="tns:UpdateUserRoleForListSoapIn" />
+      <wsdl:output message="tns:UpdateUserRoleForListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRoleForList">
+      <wsdl:input message="tns:RemoveUserRoleForListSoapIn" />
+      <wsdl:output message="tns:RemoveUserRoleForListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRoleForWeb">
+      <wsdl:input message="tns:UpdateUserRoleForWebSoapIn" />
+      <wsdl:output message="tns:UpdateUserRoleForWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRoleForWeb">
+      <wsdl:input message="tns:RemoveUserRoleForWebSoapIn" />
+      <wsdl:output message="tns:RemoveUserRoleForWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRoleForFolder">
+      <wsdl:input message="tns:AddUserRoleForFolderSoapIn" />
+      <wsdl:output message="tns:AddUserRoleForFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRoleForWeb">
+      <wsdl:input message="tns:AddUserRoleForWebSoapIn" />
+      <wsdl:output message="tns:AddUserRoleForWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRoleForList">
+      <wsdl:input message="tns:AddUserRoleForListSoapIn" />
+      <wsdl:output message="tns:AddUserRoleForListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserRoleForFolder">
+      <wsdl:input message="tns:ClearUserRoleForFolderSoapIn" />
+      <wsdl:output message="tns:ClearUserRoleForFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserRoleForWeb">
+      <wsdl:input message="tns:ClearUserRoleForWebSoapIn" />
+      <wsdl:output message="tns:ClearUserRoleForWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserRoleForList">
+      <wsdl:input message="tns:ClearUserRoleForListSoapIn" />
+      <wsdl:output message="tns:ClearUserRoleForListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRoleForFolder">
+      <wsdl:input message="tns:DeleteUserRoleForFolderSoapIn" />
+      <wsdl:output message="tns:DeleteUserRoleForFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRoleForWeb">
+      <wsdl:input message="tns:DeleteUserRoleForWebSoapIn" />
+      <wsdl:output message="tns:DeleteUserRoleForWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRoleForList">
+      <wsdl:input message="tns:DeleteUserRoleForListSoapIn" />
+      <wsdl:output message="tns:DeleteUserRoleForListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <wsdl:input message="tns:CreateFolderSoapIn" />
+      <wsdl:output message="tns:CreateFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolder">
+      <wsdl:input message="tns:DeleteFolderSoapIn" />
+      <wsdl:output message="tns:DeleteFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasUniqueRoleAssignmentsForWeb">
+      <wsdl:input message="tns:HasUniqueRoleAssignmentsForWebSoapIn" />
+      <wsdl:output message="tns:HasUniqueRoleAssignmentsForWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasUniqueRoleAssignmentsForList">
+      <wsdl:input message="tns:HasUniqueRoleAssignmentsForListSoapIn" />
+      <wsdl:output message="tns:HasUniqueRoleAssignmentsForListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasUniqueRoleAssignmentsForFolder">
+      <wsdl:input message="tns:HasUniqueRoleAssignmentsForFolderSoapIn" />
+      <wsdl:output message="tns:HasUniqueRoleAssignmentsForFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BreakORResetRoleInheritanceForWeb">
+      <wsdl:input message="tns:BreakORResetRoleInheritanceForWebSoapIn" />
+      <wsdl:output message="tns:BreakORResetRoleInheritanceForWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BreakORResetRoleInheritanceForList">
+      <wsdl:input message="tns:BreakORResetRoleInheritanceForListSoapIn" />
+      <wsdl:output message="tns:BreakORResetRoleInheritanceForListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BreakORResetRoleInheritanceForFolder">
+      <wsdl:input message="tns:BreakORResetRoleInheritanceForFolderSoapIn" />
+      <wsdl:output message="tns:BreakORResetRoleInheritanceForFolderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebsListColloction">
+      <soap:operation soapAction="http://tempuri.org/GetWebsListColloction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolders">
+      <soap:operation soapAction="http://tempuri.org/GetFolders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebPermissions">
+      <soap:operation soapAction="http://tempuri.org/GetWebPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderPermissions">
+      <soap:operation soapAction="http://tempuri.org/GetFolderPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListPermissions">
+      <soap:operation soapAction="http://tempuri.org/GetListPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleCollectionFromWeb">
+      <soap:operation soapAction="http://tempuri.org/GetRoleCollectionFromWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRoleForFolder">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserRoleForFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRoleForFolder">
+      <soap:operation soapAction="http://tempuri.org/RemoveUserRoleForFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRoleForList">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserRoleForList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRoleForList">
+      <soap:operation soapAction="http://tempuri.org/RemoveUserRoleForList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRoleForWeb">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserRoleForWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRoleForWeb">
+      <soap:operation soapAction="http://tempuri.org/RemoveUserRoleForWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRoleForFolder">
+      <soap:operation soapAction="http://tempuri.org/AddUserRoleForFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRoleForWeb">
+      <soap:operation soapAction="http://tempuri.org/AddUserRoleForWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRoleForList">
+      <soap:operation soapAction="http://tempuri.org/AddUserRoleForList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserRoleForFolder">
+      <soap:operation soapAction="http://tempuri.org/ClearUserRoleForFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserRoleForWeb">
+      <soap:operation soapAction="http://tempuri.org/ClearUserRoleForWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserRoleForList">
+      <soap:operation soapAction="http://tempuri.org/ClearUserRoleForList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRoleForFolder">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserRoleForFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRoleForWeb">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserRoleForWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRoleForList">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserRoleForList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <soap:operation soapAction="http://tempuri.org/CreateFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolder">
+      <soap:operation soapAction="http://tempuri.org/DeleteFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasUniqueRoleAssignmentsForWeb">
+      <soap:operation soapAction="http://tempuri.org/HasUniqueRoleAssignmentsForWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasUniqueRoleAssignmentsForList">
+      <soap:operation soapAction="http://tempuri.org/HasUniqueRoleAssignmentsForList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasUniqueRoleAssignmentsForFolder">
+      <soap:operation soapAction="http://tempuri.org/HasUniqueRoleAssignmentsForFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BreakORResetRoleInheritanceForWeb">
+      <soap:operation soapAction="http://tempuri.org/BreakORResetRoleInheritanceForWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BreakORResetRoleInheritanceForList">
+      <soap:operation soapAction="http://tempuri.org/BreakORResetRoleInheritanceForList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BreakORResetRoleInheritanceForFolder">
+      <soap:operation soapAction="http://tempuri.org/BreakORResetRoleInheritanceForFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebsListColloction">
+      <soap12:operation soapAction="http://tempuri.org/GetWebsListColloction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolders">
+      <soap12:operation soapAction="http://tempuri.org/GetFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebPermissions">
+      <soap12:operation soapAction="http://tempuri.org/GetWebPermissions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderPermissions">
+      <soap12:operation soapAction="http://tempuri.org/GetFolderPermissions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListPermissions">
+      <soap12:operation soapAction="http://tempuri.org/GetListPermissions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleCollectionFromWeb">
+      <soap12:operation soapAction="http://tempuri.org/GetRoleCollectionFromWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRoleForFolder">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserRoleForFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRoleForFolder">
+      <soap12:operation soapAction="http://tempuri.org/RemoveUserRoleForFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRoleForList">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserRoleForList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRoleForList">
+      <soap12:operation soapAction="http://tempuri.org/RemoveUserRoleForList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRoleForWeb">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserRoleForWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRoleForWeb">
+      <soap12:operation soapAction="http://tempuri.org/RemoveUserRoleForWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRoleForFolder">
+      <soap12:operation soapAction="http://tempuri.org/AddUserRoleForFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRoleForWeb">
+      <soap12:operation soapAction="http://tempuri.org/AddUserRoleForWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRoleForList">
+      <soap12:operation soapAction="http://tempuri.org/AddUserRoleForList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserRoleForFolder">
+      <soap12:operation soapAction="http://tempuri.org/ClearUserRoleForFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserRoleForWeb">
+      <soap12:operation soapAction="http://tempuri.org/ClearUserRoleForWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserRoleForList">
+      <soap12:operation soapAction="http://tempuri.org/ClearUserRoleForList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRoleForFolder">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserRoleForFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRoleForWeb">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserRoleForWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRoleForList">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserRoleForList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <soap12:operation soapAction="http://tempuri.org/CreateFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolder">
+      <soap12:operation soapAction="http://tempuri.org/DeleteFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasUniqueRoleAssignmentsForWeb">
+      <soap12:operation soapAction="http://tempuri.org/HasUniqueRoleAssignmentsForWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasUniqueRoleAssignmentsForList">
+      <soap12:operation soapAction="http://tempuri.org/HasUniqueRoleAssignmentsForList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasUniqueRoleAssignmentsForFolder">
+      <soap12:operation soapAction="http://tempuri.org/HasUniqueRoleAssignmentsForFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BreakORResetRoleInheritanceForWeb">
+      <soap12:operation soapAction="http://tempuri.org/BreakORResetRoleInheritanceForWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BreakORResetRoleInheritanceForList">
+      <soap12:operation soapAction="http://tempuri.org/BreakORResetRoleInheritanceForList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BreakORResetRoleInheritanceForFolder">
+      <soap12:operation soapAction="http://tempuri.org/BreakORResetRoleInheritanceForFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.9.229/_vti_bin/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.9.229/_vti_bin/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

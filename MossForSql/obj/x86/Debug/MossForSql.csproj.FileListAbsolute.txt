@@ -1,0 +1,17 @@
+E:\Work\MossForSql\MossForSql\bin\Debug\MossForSql.exe
+E:\Work\MossForSql\MossForSql\bin\Debug\MossForSql.pdb
+E:\Work\MossForSql\MossForSql\obj\x86\Debug\MossForSql.Properties.Resources.resources
+E:\Work\MossForSql\MossForSql\obj\x86\Debug\MossForSql.csproj.GenerateResource.Cache
+E:\Work\MossForSql\MossForSql\obj\x86\Debug\MossForSql.exe
+E:\Work\MossForSql\MossForSql\obj\x86\Debug\MossForSql.pdb
+E:\Work\MossForSql\MossForSql\obj\x86\Debug\MossForSql.Moss2Sql.resources
+E:\Work\MossForSql\MossForSql\bin\Debug\MossForSql.exe.config
+F:\MossForSql\MossForSql\bin\Debug\MossForSql.dll.config
+F:\MossForSql\MossForSql\bin\Debug\MossForSql.dll
+F:\MossForSql\MossForSql\bin\Debug\MossForSql.pdb
+F:\MossForSql\MossForSql\obj\x86\Debug\MossForSql.Moss2Sql.resources
+F:\MossForSql\MossForSql\obj\x86\Debug\MossForSql.Properties.Resources.resources
+F:\MossForSql\MossForSql\obj\x86\Debug\MossForSql.csproj.GenerateResource.Cache
+F:\MossForSql\MossForSql\obj\x86\Debug\MossForSql.dll
+F:\MossForSql\MossForSql\obj\x86\Debug\MossForSql.pdb
+F:\MossForSql\MossForSql\obj\x86\Debug\MossForSql.csprojResolveAssemblyReference.cache
